@@ -1,0 +1,87 @@
+{
+  "@id": "https://data.awesomeness.nl/starwars/",
+  "@context": [
+    "https://raw.githubusercontent.com/CLARIAH/COW/master/csvw.json",
+    {
+      "@base": "https://data.awesomeness.nl/starwars/"
+    }
+  ],
+  "url": "",
+  "dialect": {
+    "delimiter": ",",
+    "encoding": "UTF-8",
+    "quoteChar": "\""
+  },
+  "tableSchema": {
+    "aboutUrl": "https://data.awesomeness.nl/starwars/id/{_row}",
+    "primaryKey": "Resource",
+    "columns": [
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "aboutUrl": "https://data.awesomeness.nl/starwars/id/{_row}",
+        "valueUrl": "https://schema.org/character"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/name",
+        "name": "name",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label"
+      },
+      {
+        "datatype": "integer",
+        "@id": "https://data.awesomeness.nl/starwars/column/height",
+        "name": "height",
+        "propertyUrl": "https://schema.org/height"
+      },
+      {
+        "datatype": "integer",
+        "@id": "https://data.awesomeness.nl/starwars/column/mass",
+        "name": "mass",
+        "propertyUrl": "https://schema.org/weight"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/hair_color",
+        "name": "hair_color",
+        "propertyUrl": "https://data.awesomeness.nl/starwars/def/hair_color"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/skin_color",
+        "name": "skin_color",
+        "propertyUrl": "https://data.awesomeness.nl/starwars/def/skin_color"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/eye_color",
+        "name": "eye_color",
+        "propertyUrl": "https://data.awesomeness.nl/starwars/def/eye_color"
+      },
+      {
+        "datatype": "gYear",
+        "@id": "https://data.awesomeness.nl/starwars/column/birth_year",
+        "name": "birth_year",
+        "propertyUrl": "https://schema.org/birthDate"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/gender",
+        "name": "gender",
+        "propertyUrl": "https://schema.org/gender"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/homeworld",
+        "name": "homeworld",
+        "propertyUrl": "https://schema.org/birthPlace"
+      },
+      {
+        "datatype": "string",
+        "@id": "https://data.awesomeness.nl/starwars/column/species",
+        "name": "species",
+        "propertyUrl": "http://purl.org/ontology/wo/Species"
+      }
+    ]
+  }
+}
